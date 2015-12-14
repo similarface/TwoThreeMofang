@@ -16,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/TwoThreeMofang$views.coverage" NAME="views Coverage Results" MODIFIED="1449712732998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ensembl" />
     <SUITE FILE_PATH="coverage/TwoThreeMofang$Paging.coverage" NAME="Paging Coverage Results" MODIFIED="1449713392959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TwoThreeMofang/common/tools" />
-    <SUITE FILE_PATH="coverage/TwoThreeMofang$manage.coverage" NAME="manage Coverage Results" MODIFIED="1449838393161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TwoThreeMofang$manage.coverage" NAME="manage Coverage Results" MODIFIED="1450055621219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -34,52 +34,65 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ensembl/urls.py">
+        <entry file="file://$PROJECT_DIR$/TwoThreeMofang/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding>
-                <element signature="e#623#664#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="populationdata.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/populationdata.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="43" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="43" />
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
+      <file leaf-file-name="index2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/index2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.637931">
+              <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ensembl/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ensembl/views.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-              <folding>
-                <element signature="e#14#111#0" expanded="true" />
-                <marker date="1449825087000" expanded="true" signature="907:990" placeholder="select * fro..ensembl_populationgenetics..." />
-                <marker date="1449825087000" expanded="true" signature="1311:1380" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-                <marker date="1449825087000" expanded="true" signature="2856:2944" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-                <marker date="1449825087000" expanded="true" signature="2975:3031" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-                <marker date="1449825087000" expanded="true" signature="2975:3083" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-                <marker date="1449825087000" expanded="true" signature="3189:3258" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-                <marker date="1449825087000" expanded="true" signature="3573:3642" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-              </folding>
+            <state vertical-scroll-proportion="26.875">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-datepicker.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ensembl/static/css/bootstrap-datepicker.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,17 +111,7 @@
         <entry file="file:///Library/Python/2.7/site-packages/Django-1.8.4-py2.7.egg/django/forms/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="186" column="11" selection-start-line="186" selection-start-column="11" selection-end-line="186" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TwoThreeMofang/form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,8 +122,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="Python Script" />
+        <option value="Html5" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -145,6 +149,8 @@
         <option value="$PROJECT_DIR$/ensembl/templates/ensembl/populationdata.html" />
         <option value="$PROJECT_DIR$/ensembl/urls.py" />
         <option value="$PROJECT_DIR$/ensembl/views.py" />
+        <option value="$PROJECT_DIR$/ensembl/static/css/menucss.css" />
+        <option value="$PROJECT_DIR$/ensembl/templates/ensembl/index2.html" />
       </list>
     </option>
   </component>
@@ -156,9 +162,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="152" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="712" />
+    <option name="width" value="1109" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -249,6 +256,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ensembl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwoThreeMofang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwoThreeMofang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ensembl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwoThreeMofang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TwoThreeMofang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="TwoThreeMofang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -283,6 +330,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -293,9 +341,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ensembl/static/css" />
       <recent name="$PROJECT_DIR$/ensembl/templates/ensembl" />
       <recent name="$PROJECT_DIR$/ensembl/static/js/jqui" />
-      <recent name="$PROJECT_DIR$/ensembl/static/css" />
       <recent name="$PROJECT_DIR$/ensembl/templates/ensembl/css" />
       <recent name="$PROJECT_DIR$/ensembl/static" />
     </key>
@@ -621,16 +669,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="712" extended-state="0" />
-    <editor active="false" />
+    <frame x="152" y="23" width="1109" height="714" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32999164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21728595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15964392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38870966" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5932476" sideWeight="0.4256866" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49270666" sideWeight="0.5743134" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -638,12 +688,31 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38870966" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61612904" sideWeight="0.4256866" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32999164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38870966" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49270666" sideWeight="0.5743134" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21728595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61612904" sideWeight="0.4256866" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -680,40 +749,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ensembl/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#111#0" expanded="true" />
-            <marker date="1449825087000" expanded="true" signature="907:990" placeholder="select * fro..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="1311:1380" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="2856:2944" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="2975:3031" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="2975:3083" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="3189:3258" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="3573:3642" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Django-1.8.4-py2.7.egg/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensembl/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding>
-            <element signature="e#623#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -889,25 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TwoThreeMofang/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensembl/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -976,33 +996,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TwoThreeMofang/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8115942">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TwoThreeMofang/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/temp/name">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Django-1.8.4-py2.7.egg/django/forms/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="186" column="11" selection-start-line="186" selection-start-column="11" selection-end-line="186" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1036,13 +1033,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TwoThreeMofang/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10135135">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/Django-1.8.4-py2.7.egg/django/forms/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ensembl/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="e#623#664#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29801324">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,27 +1075,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
+    <entry file="file://$PROJECT_DIR$/ensembl/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3642384">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <element signature="e#14#111#0" expanded="true" />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="select * fro..ensembl_populationgenetics..." />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+            <marker date="1450058274000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TwoThreeMofang/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensembl/views.py">
+    <entry file="file://$PROJECT_DIR$/ensembl/static/css/bootstrap-datepicker.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensembl/static/css/menucss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="26.875">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensembl/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensembl/templates/ensembl/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.637931">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
           <folding>
-            <element signature="e#14#111#0" expanded="true" />
-            <marker date="1449825087000" expanded="true" signature="907:990" placeholder="select * fro..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="1311:1380" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="2856:2944" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="2975:3031" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="2975:3083" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="3189:3258" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
-            <marker date="1449825087000" expanded="true" signature="3573:3642" placeholder="SELECT * FRO..ensembl_populationgenetics..." />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

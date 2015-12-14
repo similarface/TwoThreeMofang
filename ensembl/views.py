@@ -9,7 +9,7 @@ from django.utils.safestring import mark_safe
 from django.template import RequestContext
 
 def index(request):
-    return  render_to_response('ensembl/index.html')
+    return  render_to_response('ensembl/index2.html')
 
 def Population(request,*args,**kwargs):
     print('----------Population--------------')

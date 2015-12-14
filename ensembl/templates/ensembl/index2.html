@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://admin.23mofang.com/media-article -->
+<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>媒体报道</title>
+<!-- Bootstrap Core CSS -->
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<!-- MetisMenu CSS -->
+<link href="/static/css/metisMenu.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="/static/css/web-admin.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- jquery.dataTables.css -->
+<link href="/static/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+<!-- Responsive Nav -->
+<link rel="stylesheet" href="/static/css/responsive-nav.css" type="text/css">
+<!-- jQuery -->
+<script type="text/javascript" src="/static/css/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script type="text/javascript" src="/static/css/bootstrap.min.js"></script>
+<!-- Metis Menu Plugin JavaScript -->
+<script type="text/javascript" src="/static/css/metisMenu.min.js"></script>
+<!-- Responsive Nav -->
+<script type="text/javascript" src="/static/css/responsive-nav.min.js"></script>
+
+<!-- jQuery DataTables JavaScript -->
+<script type="text/javascript" src="/static/css/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/static/css/dataTables.bootstrap.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/static/css/web-admin.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- Navigation -->
+    <div class="navbar-default sidebar" role="navigation">
+      <div id="nav-haeader">
+        欢迎您：
+        王炎
+        &nbsp;&nbsp; <a href="javascript:;" data-toggle="modal" data-target="#modal_form_changepwd" title="修改密码">修改</a> <a href="http://admin.23mofang.com/logout" title="注销登录"> <i class="fa fa-sign-out fa-fw"></i> </a>
+        <a href="http://admin.23mofang.com/media-article#nav" id="toggleMenu" aria-hidden="true">Menu</a>
+      </div>
+      <div class="sidebar-nav navbar-collapse">
+        <ul class="nav nav-collapse nav-collapse-0 closed in" id="side-menu" aria-hidden="false" style="transition: max-height 284ms; position: static;">
+          <li class="">
+    <a href="http://admin.23mofang.com/media-article#"> <i class="fa fa-sitemap fa-fw"> </i> Ensembl <span class="fa arrow"></span> </a>
+    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+      <li>
+        <a href="/ensembl/Population/"> <i class="fa fa-medkit fa-fw"> </i>PopulationGenetics</a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/drug"> <i class="fa fa-briefcase fa-fw"> </i> 药物列表 </a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/trait"> <i class="fa fa-leaf fa-fw"> </i> 体质特征 </a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/trait-category"> <i class="fa fa-leaf fa-fw"> </i> 体质特征分类</a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/inherited"> <i class="fa fa-pagelines fa-fw"> </i> 罕见遗传病 </a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/inherited-cancer"> <i class="fa fa-child fa-fw"> </i> 遗传性肿瘤 </a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/gene"> <i class="fa fa-stumbleupon fa-fw"> </i> 基因库 </a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/pathotype"> <i class="fa fa-exclamation-circle fa-fw"> </i> 致病突变 </a>
+      </li>
+      <li>
+        <a href="http://admin.23mofang.com/impact-factor"> <i class="fa fa-fighter-jet fa-fw"> </i> 影响因素 </a>
+      </li>
+    </ul>
+  </li>
+<li>
+    <a href="http://127.0.0.1:8000/ensembl/Population/" class="active"> <i class="fa fa-bullhorn fa-fw"> </i> 媒体报道 </a>
+  </li>
+<li>
+  <a href="http://admin.23mofang.com/faq"> <i class="fa fa-question-circle fa-fw"> </i> FAQ </a>
+</li>
+<li>
+    <a href="http://admin.23mofang.com/sms"> <i class="fa fa-envelope fa-fw"> </i> 短信中心 </a>
+  </li>
+<li>
+    <a href="http://admin.23mofang.com/media-article#"> <i class="fa fa-bullhorn fa-fw"> </i> Gene Club <span class="fa arrow"></span> </a>
+    <ul class="nav nav-second-level collapse">
+      <li>
+        <a href="http://admin.23mofang.com/gene-club/list">文章列表 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+      </div>
+    </div>
+    <!-- Page Content -->
+    <div id="page-wrapper">
+      <link rel="stylesheet" href="/static/css/bootstrap-datepicker.min.css">
+<script type="text/javascript" src="/static/css/bootstrap-tagsinput.js"></script>
+<div class="container-fluid">
+  <div class="row">
+    <form class="form-inline col-sm-11" id="search_form">
+      <div class="form-group">
+        <label for="search_name">报道名称</label>
+        <input type="text" class="form-control" name="articleName" id="search_name" placeholder="中文或英文名称模糊匹配">
+      </div>
+      <div class="form-group">
+        <label for="search_source_name">报道来源</label>
+        <input type="text" class="form-control" name="articleSource" id="search_source_name" placeholder="中文或英文名称模糊匹配">
+      </div>
+      <button type="submit" class="btn btn-default query">查询</button>
+      <button type="button" class="btn btn-default add">添加</button>
+    </form>
+  </div>
+  <div class="row">
+    <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="example" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+      <thead>
+        <tr role="row"><th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">报道来源</th><th width="*" class="sorting_disabled" rowspan="1" colspan="1" style="width: 556px;">文章标题</th><th width="15%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 124px;">发布时间</th><th width="6%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 27px;">置顶</th><th width="6%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 27px;">隐藏</th><th width="8%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 49px;">操作</th></tr>
+      </thead>
+    <tbody><tr role="row" class="odd"><td class=" text-center">网易</td><td><a href="http://admin.23mofang.com/media-article/edit/55e585230cf2ff748b9ca409">川妹子有特殊基因<br>23魔方基因检测专车独家揭秘</a></td><td class=" text-center">2015-08-31 00:00:01</td><td class=" text-center">true</td><td class=" text-center">false</td><td class=" text-center"><a href="http://admin.23mofang.com/media-article#" edit="0">编辑</a></td></tr><tr role="row" class="even"><td class=" text-center">凤凰资讯</td><td><a href="http://admin.23mofang.com/media-article/edit/55e56ef60cf2ff748b9ca3fb">23魔方携滴滴打造基因专车<br>探索人体的秘密</a></td><td class=" text-center">2015-08-24 00:00:01</td><td class=" text-center">true</td><td class=" text-center">false</td><td class=" text-center"><a href="http://admin.23mofang.com/media-article#" edit="1">编辑</a></td></tr><tr role="row" class="odd"><td class=" text-center">今日头条</td><td><a href="http://admin.23mofang.com/media-article/edit/55e56f870cf2ff748b9ca3fc">基因触手可及<br> 23魔方携滴滴开启基因专车全国普查</a></td><td class=" text-center">2015-08-21 00:00:01</td><td class=" text-center">true</td><td class=" text-center">false</td><td class=" text-center"><a href="http://admin.23mofang.com/media-article#" edit="2">编辑</a></td></tr></tbody></table><div id="example_processing" class=" dataTables_processing " style="display: none;">Please wait - loading...</div></div></div><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">第 1 / 1 页 共  3 条记录</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="example" tabindex="0" id="example_previous"><a href="http://admin.23mofang.com/media-article#">Previous</a></li><li class="paginate_button active" aria-controls="example" tabindex="0"><a href="http://admin.23mofang.com/media-article#">1</a></li><li class="paginate_button next disabled" aria-controls="example" tabindex="0" id="example_next"><a href="http://admin.23mofang.com/media-article#">Next</a></li></ul></div></div></div></div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">编辑</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <input type="hidden" name="id">
+          <div class="form-group">
+            <label for="articleSource" class="col-sm-3 control-label">报道来源</label>
+            <div class="col-sm-6 input-group">
+              <input type="text" class="form-control" id="articleSource" name="articleSource" placeholder="输入报道来源">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="articleName" class="col-sm-3 control-label">文章标题</label>
+            <div class="col-sm-6 input-group">
+              <input type="text" class="form-control" id="articleName" name="articleName" placeholder="输入文章标题">
+            </div>
+          </div>
+           <div class="form-group">
+        	<label for="publishTime" class="col-sm-3 control-label">发布时间</label>
+       		<input type="text" class="datepicker form-control" style="width:168px" data-date-format="yyyy-mm-dd 00:00:01" name="publishTime" id="publishTime">
+     	  </div> 
+          <div class="form-group">
+            <label for="topUp" class="col-sm-3 control-label">前台置顶</label>
+            <div class="col-sm-6 checkbox" style="padding-left: 0;">
+              <label>
+                <input type="checkbox" id="topUp" name="topUp">
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hidden" class="col-sm-3 control-label">前台隐藏</label>
+            <div class="col-sm-6 checkbox" style="padding-left: 0;">
+              <label>
+                <input type="checkbox" id="hidden" name="hidden">
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="btnSave" data-loading-text="Saving...">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/static/css/bootstrap-datepicker.min.js"></script>
+<script src="/static/css/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 禁止直接在全局范围内声明变量,开发规范。
+   */
+(function(){
+    $(document).ready(function() {
+    
+        $('.datepicker').datepicker({language:'zh-CN',autoclose:true});
+        
+  		$('input.price').on('keydown', function(evt){
+        	return evt.keyCode < 58 && evt.keyCode != 32
+        		|| evt.keyCode > 95 && evt.keyCode < 106
+        		/*|| (evt.keyCode == 190 || evt.keyCode == 110)  && evt.target.value.indexOf('.') < 0*/
+        }).on('keyup', function(evt){
+			if(isNaN(evt.target.value)){
+        		evt.target.value = '';
+        	}
+        });  
+    
+    
+        var $searchForm = $('#search_form');
+        var $formMoal   = $('#myModal').on('hidden.bs.modal', function(){
+            $('#btnSave').button('reset');
+        });
+        var $dt = $('#example').on('preXhr.dt', function(e, settings, data){
+        	data.search.value = $searchForm.formGet();
+        }).dataTable( {
+            "columns": [
+                        { "data": "articleSource", "class":"text-center"},
+                        { "data": "articleName",
+                        	"render": function ( data, type, row ) {
+                                return $.format('<a href="/media-article/edit/{id}">{articleName}</a>', row);
+                            }
+                        },                        
+                        { "data": "publishTime" , "class":"text-center"},
+                        { "data": "topUp" , "class":"text-center"},
+                        { "data": "hidden" , "class":"text-center"},
+                        { "class":"text-center", 
+                        	"render": function ( data, type, row, position ) {
+                        		return '<a href="#" edit="'+ position.row +'">编辑</a>';
+                            }
+                        }
+                    ],
+            "ajax": $.fn.dataTable.pagerAjax({url:"/media-article/list/ajax"})
+        });
+        
+        $dt.on('click', 'a[edit]', function(){
+            var rowIdx = $(this).attr('edit');
+            var data = $dt.DataTable().data()[rowIdx];
+            $dt.data('editRowIndex', rowIdx);
+            var $tagsInput = $formMoal.formSet(data).find('input[data-role="tagsinput"]');
+            $tagsInput.tagsinput('removeAll');
+            $tagsInput.tagsinput('add', $.join(data.tags,','));
+            $formMoal.modal('show');
+        });        
+       
+        $searchForm.on('click', 'button.add', function(){
+            $formMoal.formSet({});
+            $formMoal.modal('show');
+        }).on('submit',function(){
+        	$dt.DataTable().searchEx( {} ).draw();
+        	return false;
+        });
+                
+        $('#btnSave').click(function(){
+            $(this).button('loading');
+            var data = $formMoal.formGet();       
+            $.postJSON(
+	            '/media-article/save', 
+	            data, 
+	            function(res){
+	            	console.log(res);
+	            	if(!data.id){
+		                //新增
+		                data.id = res.result;
+		                $dt.DataTable().row.insert(data).redraw();
+		            }else{
+		                //更新
+		                $dt.DataTable().row( $dt.data('editRowIndex') ).data(data).redraw();
+		            }
+		            $formMoal.modal('hide');
+	            }, 
+	            function(error){
+	            	console.log(error);
+	            	alert('保存失败.');
+	            }
+            );
+        });
+    });
+})();
+</script>
+</div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal_form_changepwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="form-horizontal">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">修改密码</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label">用户名</label>
+              <div class="col-sm-6 input-group">
+                <input type="text" class="form-control" id="username" readonly="" value="王炎">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="oldPassword" class="col-sm-3 control-label">旧密码</label>
+              <div class="col-sm-6 input-group">
+                <input type="password" class="form-control" id="oldPassword" name="oldPassword">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-sm-3 control-label">新密码</label>
+              <div class="col-sm-6 input-group">
+                <input type="password" class="form-control" id="password" name="password">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">放弃</button>
+              <button type="submit" class="btn btn-primary save" data-loading-text="Saving...">保存</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+    var navigation = responsiveNav("#side-menu", {customToggle: "#toggleMenu", openPos: "static"});
+    $(function() {
+      $('#modal_form_changepwd form').on('submit', function() {
+        var data = $(this).formGet();
+        console.log(data);
+        $.ajax({
+          url: "/change-pwd",
+          type: "POST",
+          dataType: "json",
+          cache: false,
+          data: data,
+          success: function(res) {
+            if (!res.code) return alert(res.error || '保存失败!');
+            $('#modal_form_changepwd').modal('hide').formSet({});
+          },
+          error: function() {
+            alert('保存失败!');
+          }
+        });
+        return false;
+      });
+    });
+  </script>
+
+</div></body></html>
