@@ -46,10 +46,10 @@
       <div class="sidebar-nav navbar-collapse">
         <ul class="nav nav-collapse nav-collapse-0 closed in" id="side-menu" aria-hidden="false" style="transition: max-height 284ms; position: static;">
           <li class="">
-    <a href="http://admin.23mofang.com/media-article#"> <i class="fa fa-sitemap fa-fw"> </i> Ensembl <span class="fa arrow"></span> </a>
+    <a href="http://admin.23mofang.com/media-article#"> <i class="fa fa-sitemap fa-fw"> </i> 数据管理 <span class="fa arrow"></span> </a>
     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
       <li>
-        <a href="/ensembl/Population/"> <i class="fa fa-medkit fa-fw"> </i>PopulationGenetics</a>
+        <a href="http://admin.23mofang.com/disease"> <i class="fa fa-medkit fa-fw"> </i> 健康风险 </a>
       </li>
       <li>
         <a href="http://admin.23mofang.com/drug"> <i class="fa fa-briefcase fa-fw"> </i> 药物列表 </a>
@@ -78,7 +78,7 @@
     </ul>
   </li>
 <li>
-    <a href="http://127.0.0.1:8000/ensembl/Population/" class="active"> <i class="fa fa-bullhorn fa-fw"> </i> 媒体报道 </a>
+    <a href="/static/css/媒体报道.html" class="active"> <i class="fa fa-bullhorn fa-fw"> </i> 媒体报道 </a>
   </li>
 <li>
   <a href="http://admin.23mofang.com/faq"> <i class="fa fa-question-circle fa-fw"> </i> FAQ </a>
@@ -117,11 +117,13 @@
     </form>
   </div>
   <div class="row">
-    <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="example" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
-      <thead>
-        <tr role="row"><th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">报道来源</th><th width="*" class="sorting_disabled" rowspan="1" colspan="1" style="width: 556px;">文章标题</th><th width="15%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 124px;">发布时间</th><th width="6%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 27px;">置顶</th><th width="6%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 27px;">隐藏</th><th width="8%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 49px;">操作</th></tr>
-      </thead>
-    <tbody><tr role="row" class="odd"><td class=" text-center">网易</td><td><a href="http://admin.23mofang.com/media-article/edit/55e585230cf2ff748b9ca409">川妹子有特殊基因<br>23魔方基因检测专车独家揭秘</a></td><td class=" text-center">2015-08-31 00:00:01</td><td class=" text-center">true</td><td class=" text-center">false</td><td class=" text-center"><a href="http://admin.23mofang.com/media-article#" edit="0">编辑</a></td></tr><tr role="row" class="even"><td class=" text-center">凤凰资讯</td><td><a href="http://admin.23mofang.com/media-article/edit/55e56ef60cf2ff748b9ca3fb">23魔方携滴滴打造基因专车<br>探索人体的秘密</a></td><td class=" text-center">2015-08-24 00:00:01</td><td class=" text-center">true</td><td class=" text-center">false</td><td class=" text-center"><a href="http://admin.23mofang.com/media-article#" edit="1">编辑</a></td></tr><tr role="row" class="odd"><td class=" text-center">今日头条</td><td><a href="http://admin.23mofang.com/media-article/edit/55e56f870cf2ff748b9ca3fc">基因触手可及<br> 23魔方携滴滴开启基因专车全国普查</a></td><td class=" text-center">2015-08-21 00:00:01</td><td class=" text-center">true</td><td class=" text-center">false</td><td class=" text-center"><a href="http://admin.23mofang.com/media-article#" edit="2">编辑</a></td></tr></tbody></table><div id="example_processing" class=" dataTables_processing " style="display: none;">Please wait - loading...</div></div></div><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">第 1 / 1 页 共  3 条记录</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="example" tabindex="0" id="example_previous"><a href="http://admin.23mofang.com/media-article#">Previous</a></li><li class="paginate_button active" aria-controls="example" tabindex="0"><a href="http://admin.23mofang.com/media-article#">1</a></li><li class="paginate_button next disabled" aria-controls="example" tabindex="0" id="example_next"><a href="http://admin.23mofang.com/media-article#">Next</a></li></ul></div></div></div></div>
+    <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row">
+        <div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row">
+        <div class="col-sm-12">
+
+            {% block content %}
+            {% endblock %}
+            <div id="example_processing" class=" dataTables_processing " style="display: none;">Please wait - loading...</div></div></div><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">第 1 / 1 页 共  3 条记录</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="example" tabindex="0" id="example_previous"><a href="http://admin.23mofang.com/media-article#">Previous</a></li><li class="paginate_button active" aria-controls="example" tabindex="0"><a href="http://admin.23mofang.com/media-article#">1</a></li><li class="paginate_button next disabled" aria-controls="example" tabindex="0" id="example_next"><a href="http://admin.23mofang.com/media-article#">Next</a></li></ul></div></div></div></div>
   </div>
 </div>
 
@@ -181,97 +183,8 @@
 </div>
 <script src="/static/css/bootstrap-datepicker.min.js"></script>
 <script src="/static/css/bootstrap-datepicker.zh-CN.min.js"></script>
-<script type="text/javascript">
-  /**
-   * 禁止直接在全局范围内声明变量,开发规范。
-   */
-(function(){
-    $(document).ready(function() {
-    
-        $('.datepicker').datepicker({language:'zh-CN',autoclose:true});
-        
-  		$('input.price').on('keydown', function(evt){
-        	return evt.keyCode < 58 && evt.keyCode != 32
-        		|| evt.keyCode > 95 && evt.keyCode < 106
-        		/*|| (evt.keyCode == 190 || evt.keyCode == 110)  && evt.target.value.indexOf('.') < 0*/
-        }).on('keyup', function(evt){
-			if(isNaN(evt.target.value)){
-        		evt.target.value = '';
-        	}
-        });  
-    
-    
-        var $searchForm = $('#search_form');
-        var $formMoal   = $('#myModal').on('hidden.bs.modal', function(){
-            $('#btnSave').button('reset');
-        });
-        var $dt = $('#example').on('preXhr.dt', function(e, settings, data){
-        	data.search.value = $searchForm.formGet();
-        }).dataTable( {
-            "columns": [
-                        { "data": "articleSource", "class":"text-center"},
-                        { "data": "articleName",
-                        	"render": function ( data, type, row ) {
-                                return $.format('<a href="/media-article/edit/{id}">{articleName}</a>', row);
-                            }
-                        },                        
-                        { "data": "publishTime" , "class":"text-center"},
-                        { "data": "topUp" , "class":"text-center"},
-                        { "data": "hidden" , "class":"text-center"},
-                        { "class":"text-center", 
-                        	"render": function ( data, type, row, position ) {
-                        		return '<a href="#" edit="'+ position.row +'">编辑</a>';
-                            }
-                        }
-                    ],
-            "ajax": $.fn.dataTable.pagerAjax({url:"/media-article/list/ajax"})
-        });
-        
-        $dt.on('click', 'a[edit]', function(){
-            var rowIdx = $(this).attr('edit');
-            var data = $dt.DataTable().data()[rowIdx];
-            $dt.data('editRowIndex', rowIdx);
-            var $tagsInput = $formMoal.formSet(data).find('input[data-role="tagsinput"]');
-            $tagsInput.tagsinput('removeAll');
-            $tagsInput.tagsinput('add', $.join(data.tags,','));
-            $formMoal.modal('show');
-        });        
-       
-        $searchForm.on('click', 'button.add', function(){
-            $formMoal.formSet({});
-            $formMoal.modal('show');
-        }).on('submit',function(){
-        	$dt.DataTable().searchEx( {} ).draw();
-        	return false;
-        });
-                
-        $('#btnSave').click(function(){
-            $(this).button('loading');
-            var data = $formMoal.formGet();       
-            $.postJSON(
-	            '/media-article/save', 
-	            data, 
-	            function(res){
-	            	console.log(res);
-	            	if(!data.id){
-		                //新增
-		                data.id = res.result;
-		                $dt.DataTable().row.insert(data).redraw();
-		            }else{
-		                //更新
-		                $dt.DataTable().row( $dt.data('editRowIndex') ).data(data).redraw();
-		            }
-		            $formMoal.modal('hide');
-	            }, 
-	            function(error){
-	            	console.log(error);
-	            	alert('保存失败.');
-	            }
-            );
-        });
-    });
-})();
-</script>
+
+
 </div>
   </div>
   <!-- Modal -->

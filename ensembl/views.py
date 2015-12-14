@@ -10,6 +10,8 @@ from django.template import RequestContext
 
 def index(request):
     return  render_to_response('ensembl/index2.html')
+def index1(request):
+    return  render_to_response('ensembl/index2.html')
 
 def Population(request,*args,**kwargs):
     print('----------Population--------------')
@@ -17,20 +19,28 @@ def Population(request,*args,**kwargs):
     lrsid=''
     lrsid=kwargs.get('lrsid')
     if request.method=='POST':
-        lrsid=request.POST.get('rsid')
+        lrsid=request.POST.get('keyword')
     page=kwargs.get('page')
     page=StringToInt(page)
     if lrsid!=None and lrsid!='':
-        count=models.PopulationGenetics.objects.filter(rsid=lrsid).count()
-        paging=Paging(count,page,15,8)
-        SQL='select * from ensembl_populationgenetics where rsid=%s LIMIT '+str(paging.start)+","+str(paging.end)
-        result = models.PopulationGenetics.objects.raw(SQL,[lrsid])
+        lrsid=str(lrsid).strip()
+        lrsid=lrsid.replace("，",",").replace(" ",'').replace("\t","")
+        rsids=lrsid.split(',')
+        count=models.PopulationGenetics.objects.filter(rsid__in=rsids).count()
+        print(count)
+        #count=models.PopulationGenetics.objects.all().count()
+        paging=Paging(count,page,10,8)
+        param= ("%s," * rsids.__len__())[0:-1]
+        request.session["rsidlist"] = rsids
+        SQL="select * from ensembl_populationgenetics where rsid in ("+param+") LIMIT "+str(paging.start)+","+str(10)
+        result = models.PopulationGenetics.objects.raw(SQL,rsids)
+        #SQL="select * from ensembl_populationgenetics where rsid=%s LIMIT "+str(paging.start)+","+str(10)
         urlline='/ensembl/Population/'+lrsid.encode('utf-8')+'/'
         page_html=paging.PageContent(urlline)
     else:
         count=models.PopulationGenetics.objects.all().count()
-        paging=Paging(count,page,15,8)
-        SQL='SELECT * FROM ensembl_populationgenetics LIMIT '+str(paging.start)+","+str(paging.end)
+        paging=Paging(count,page,10,8)
+        SQL='SELECT * FROM ensembl_populationgenetics LIMIT '+str(paging.start)+","+str(10)
         result = models.PopulationGenetics.objects.raw(SQL)
         page_html=paging.PageContent("/ensembl/Population/")
     page=mark_safe(' '.join(page_html))
@@ -80,7 +90,7 @@ def PopulationRsids(request,*args,**kwargs):
     if rsidsStr!=None and rsidsStr!='':
         count=models.PopulationGenetics.objects.filter(rsid__in=rsidslist).count()
         print(count)
-        paging=Paging(count,page,15,8)
+        paging=Paging(count,page,10,8)
         #SQL='SELECT * FROM ensembl_populationgenetics WHERE rsid in (%s) LIMIT '+str(paging.start)+","+str(paging.end)
         SQL="SELECT * FROM ensembl_populationgenetics WHERE rsid in ('rs3815865','rs229527') LIMIT "+str(paging.start)+","+str(paging.end)
 
@@ -94,7 +104,7 @@ def PopulationRsids(request,*args,**kwargs):
     else:
         print('执行了')
         count=models.PopulationGenetics.objects.all().count()
-        paging=Paging(count,page,15,8)
+        paging=Paging(count,page,10,8)
         SQL='SELECT * FROM ensembl_populationgenetics LIMIT '+str(paging.start)+","+str(paging.end)
         result = models.PopulationGenetics.objects.raw(SQL)
         page_html=paging.PageContent("/ensembl/Population/")

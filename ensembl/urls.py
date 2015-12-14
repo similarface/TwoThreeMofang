@@ -18,9 +18,10 @@ from django.contrib import admin
 import views
 
 urlpatterns = [
-    url(r'Population/rsids/(?P<page>(\d*))',views.PopulationRsids),
+    #url(r'Population/rsids/(?P<page>(\d*))',views.PopulationRsids),
     url(r'Population/(?P<lrsid>rs(\d*))/(?P<page>(\d*))', views.Population),
-    # #url(r'Population/rsid/(\d*)', views.PopulationPost),
+    #url(r'Population/rsid/(\d*)', views.PopulationPost),
     url(r'Population/(?P<page>(\d*))', views.Population),
     url(r'index/', views.index),
+    url(r'index1/', views.index1),
 ]
