@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="/static/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="/static/js/jqui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/static/js/jqui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="/static/js/jqui/demo/demo.css">
+	<script type="text/javascript" src="/static/js/jqui/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/js/jqui/jquery.easyui.min.js"></script>
+</head>
+
+<body>
+
+<form action="/ensembl/Population/" method="post">
+{#    {% csrf_token %}#}
+    rsid:<input type="text" name="rsid"/>
+    <input type="submit" value="提交"/>
+</form>
+<br>
+
+<form enctype="multipart/form-data" method="POST" action="/ensembl/Population/rsids/">
+请选择RSIDlist文件:<input type="file" name="file" /><input type="submit" value="提交"/>
+    <br>备注：一个rsid一行
+</form>
+<br/>
+
+
+
+
+<table id="dg" class="easyui-datagrid" title="Population genetics" style="width:1000px;height:450px" data-options="singleSelect:true,url:'datagrid_data1.json',method:'get'">
+        <thead>
+			<tr>
+				<th data-options="field:'itemid',width:80">Item ID</th>
+				<th data-options="field:'productid',width:250">Product</th>
+				<th data-options="field:'listprice',width:250,align:'left'">List Price</th>
+				<th data-options="field:'unitcost',width:350,align:'left'">Unit Cost</th>
+				<th data-options="field:'attr1',width:100">Attribute</th>
+            </tr>
+		</thead>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.rsid }}</td>
+                <td>{{ item.Population }}</td>
+                <td>{{ item.Allele }}</td>
+                <td>{{ item.Genotype }}</td>
+                <td>{{ item.detail }}</td>
+            </tr>
+        {% endfor %}
+</table>
+<div style="margin:10px 0;">
+		<span>Selection Mode: </span>
+		<select onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+			<option value="0">Single Row</option>
+			<option value="1">Multiple Rows</option>
+		</select>
+	</div>
+	<script type="text/javascript">
+		function getSelected(){
+			var row = $('#dg').datagrid('getSelected');
+			if (row){
+				$.messager.alert('Info', row.itemid+":"+row.productid+":"+row.attr1);
+			}
+		}
+		function getSelections(){
+			var ss = [];
+			var rows = $('#dg').datagrid('getSelections');
+			for(var i=0; i<rows.length; i++){
+				var row = rows[i];
+				ss.push('<span>'+row.itemid+":"+row.productid+":"+row.attr1+'</span>');
+			}
+			$.messager.alert('Info', ss.join('<br/>'));
+		}
+	</script>
+
+    <div class="yahoo2">{{ page }}</div>
+    {{ count }}
+    <div style="margin:10px 0;">
+		<span>Selection Mode: </span>
+		<select onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+			<option value="0">Single Row</option>
+			<option value="1">Multiple Rows</option>
+		</select>
+	</div>
+</body>
+</html>
+
+</body>
+</html>

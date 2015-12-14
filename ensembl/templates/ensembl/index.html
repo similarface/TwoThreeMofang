@@ -1,0 +1,214 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台模板管理系统</title>
+<link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+<script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/js/menu.js"></script>
+</head>
+<style>
+    .off-left {
+    left: -9999px;
+    position: absolute;
+}
+    .sbq {
+    height: 32px;
+    width: 429px;
+    padding: 0 10px;
+    position: absolute;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #7590f5;
+    border-radius: 2px;
+    font-size: 16px;
+    z-index: 1;
+    color: #333;
+}
+
+    .sbq-w {
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+    .sbb {
+    float: right;
+    width: 98px;
+    font: 400 15px sans-serif;
+    color: #fff;
+    cursor: pointer;
+    height: 32px;
+    border: 0;
+    border-radius: 4px;
+    background: none repeat scroll 0 0 #3775DD;
+    -webkit-box-shadow: 0 2px #21487f;
+    box-shadow: 0 2px #21487f;
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+}
+    .sa-sbx-container, #sbq-wrap-bot .sa-sbx-container {
+    z-index: 10;
+    margin-top: 0;
+    top: 34px;
+    width: 451px;
+    padding-bottom: 10px;
+}
+
+    .sbq-x {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    border: none;
+    margin: 0;
+    background-color: #fff;
+    top: 5px;
+    left: 422px;
+    padding: 6px;
+}
+
+    s, .sprite, #att_icon, #verizon_icon .ico, #at-tog, .ssbang, .sschk, .ssochk, .ssbx, #ss a.ss-remove, .ads a.pp-l, .news-nph, .stars-sm span, .stars-lg span, .thmbplay, .sc-promo-img, .sc-close, #pnkribn .sym {
+    background-image: url(https://s.yimg.com/pv/static/img/srp-sprite-201311141711.png);
+}
+</style>
+<body>
+<div class="top"></div>
+<div id="header">
+	<div class="logo">23魔方后台查询系统</div>
+	<div class="navigation">
+		<ul>
+		 	<li>欢迎您！</li>
+			<li><a href="">similarface</a></li>
+			<li><a href="">修改密码</a></li>
+			<li><a href="">设置</a></li>
+			<li><a href="">退出</a></li>
+		</ul>
+	</div>
+</div>
+<div id="content">
+	<div class="left_menu">
+				<ul id="nav_dot">
+      <li>
+          <h4 class="M1"><span></span>Ensembl</h4>
+          <div class="list-item none">
+            <a href=''>ensembl</a>
+            <a href=''>系统公告2</a>
+            <a href=''>系统公告3</a>
+            <a href=''>系统公告4</a>
+          </div>
+        </li>
+        <li>
+          <h4 class="M2"><span></span>xxxx</h4>
+          <div class="list-item none">
+            <a href=''>工单处理1</a>
+            <a href=''>工单处理2</a>
+            <a href=''>工单处理3</a>
+            <a href=''>工单处理4</a>
+            <a href=''>工单处理5</a>          
+           </div>
+        </li>
+        <li>
+          <h4 class="M3"><span></span>基础教学</h4>
+          <div class="list-item none">
+            <a href=''>基础教学1</a>
+            <a href=''>基础教学2</a>
+            <a href=''>基础教学3</a>
+          </div>
+        </li>
+				<li>
+          <h4 class="M4"><span></span>评论管理</h4>
+          <div class="list-item none">
+            <a href=''>评论管理1</a>
+            <a href=''>评论管理2</a>
+            <a href=''>评论管理3</a>
+          </div>
+        </li>
+				<li>
+          <h4 class="M5"><span></span>调研问卷</h4>
+          <div class="list-item none">
+            <a href=''>调研问卷1</a>
+            <a href=''>调研问卷2</a>
+            <a href=''>调研问卷3</a>
+          </div>
+        </li>
+				<li>
+          <h4  class="M6"><span></span>数据统计</h4>
+          <div class="list-item none">
+            <a href=''>数据统计1</a>
+            <a href=''>数据统计2</a>
+            <a href=''>数据统计3</a>
+          </div>
+        </li>
+				<li>
+          <h4  class="M7"><span></span>奖励管理</h4>
+          <div class="list-item none">
+            <a href=''>奖励管理1</a>
+            <a href=''>奖励管理2</a>
+            <a href=''>奖励管理3</a>
+          </div>
+        </li>
+				<li>
+          <h4   class="M8"><span></span>字典维护</h4>
+          <div class="list-item none">
+            <a href=''>字典维护1</a>
+            <a href=''>字典维护2</a>
+            <a href=''>字典维护3</a>
+						<a href=''>字典维护4</a>
+            <a href=''>字典维护5</a>
+            <a href=''>字典维护6</a>
+						<a href=''>字典维护7</a>
+            <a href=''>字典维护8</a>
+            <a href=''>字典维护9</a>
+						<a href=''>字典维护4</a>
+            <a href=''>字典维护5</a>
+            <a href=''>字典维护6</a>
+						<a href=''>字典维护7</a>
+            <a href=''>字典维护8</a>
+            <a href=''>字典维护9</a>
+          </div>
+        </li>
+				<li>
+          <h4  class="M9"><span></span>内容管理</h4>
+          <div class="list-item none">
+            <a href=''>内容管理1</a>
+            <a href=''>内容管理2</a>
+            <a href=''>内容管理3</a>
+          </div>
+        </li>
+				<li>
+          <h4   class="M10"><span></span>系统管理</h4>
+          <div class="list-item none">
+            <a href=''>系统管理1</a>
+            <a href=''>系统管理2</a>
+            <a href=''>系统管理3</a>
+          </div>
+        </li>
+  </ul>
+		</div>
+		<div class="m-right">
+			<div class="right-nav">
+					<ul>
+							<li><img src="/static/images/home.png"></li>
+								<li style="margin-left:25px;">您当前的位置：</li>
+								<li><a href="#">系统公告</a></li>
+								<li>></li>
+								<li><a href="#">最新公告</a></li>
+						</ul>
+			</div>
+			<div class="main">
+				<form method="get" name="s" id="sf" role="search" action="" accept-charset="utf-8">
+                    <label for="yschsp" class="off-left">Search query</label>
+                    <div id="sbq-wrap" class="sbq-w">
+                        <input type="text" class="sbq" id="yschsp" name="p" value="" autocomplete="off" tabindex="1">
+                    </div>
+                    <button id="sbq-clear" type="button" class="sbq-x">
+                        <span class="sprite"></span></button>
+                    <input type="submit" class="sbb" value="Search" tabindex="2">
+                </form>
+            </div>
+		</div>
+</div>
+<div class="bottom"></div>
+<div id="footer"><p>Copyright©  2015 版权所有 京ICP备05019125号-10  来源:<a href="http://www.23mofang.com/" target="_blank">23魔方</a></p></div>
+<script>navList(12);</script>
+</body>
+</html>
