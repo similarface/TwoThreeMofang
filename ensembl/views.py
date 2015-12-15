@@ -15,33 +15,41 @@ def index1(request):
 
 def Population(request,*args,**kwargs):
     print('----------Population--------------')
+    print(args,kwargs)
     #总记录数
-    lrsid=''
-    lrsid=kwargs.get('lrsid')
+
     if request.method=='POST':
         lrsid=request.POST.get('keyword')
+        print(lrsid)
+        lrsid=str(lrsid).strip()
+        if lrsid!="" and lrsid!=None:
+            lrsid=lrsid.replace("，",",").replace(" ",'').replace("\t","")
+            rsids=lrsid.split(',')
+            request.session['rsidlist']=rsids
+        else:
+            request.session['rsidlist']=None
     page=kwargs.get('page')
     page=StringToInt(page)
-    if lrsid!=None and lrsid!='':
-        lrsid=str(lrsid).strip()
-        lrsid=lrsid.replace("，",",").replace(" ",'').replace("\t","")
-        rsids=lrsid.split(',')
+    rsids=request.session.get('rsidlist')
+    if rsids!=None and rsids!='' and 'rsids' in request.path:
+        print(','.join(rsids))
         count=models.PopulationGenetics.objects.filter(rsid__in=rsids).count()
         print(count)
         #count=models.PopulationGenetics.objects.all().count()
         paging=Paging(count,page,10,8)
-        param= ("%s," * rsids.__len__())[0:-1]
-        request.session["rsidlist"] = rsids
-        SQL="select * from ensembl_populationgenetics where rsid in ("+param+") LIMIT "+str(paging.start)+","+str(10)
-        result = models.PopulationGenetics.objects.raw(SQL,rsids)
+        #param= ("%s," * rsids.__len__())[0:-1]
+        # SQL="select * from ensembl_populationgenetics where rsid in ("+param+") LIMIT "+str(paging.start)+","+str(10)
+        # result = models.PopulationGenetics.objects.raw(SQL,rsids)
+        result=models.PopulationGenetics.objects.filter(rsid__in=rsids)[paging.start:paging.end]
         #SQL="select * from ensembl_populationgenetics where rsid=%s LIMIT "+str(paging.start)+","+str(10)
-        urlline='/ensembl/Population/'+lrsid.encode('utf-8')+'/'
+        urlline='/ensembl/Population/rsids/'
         page_html=paging.PageContent(urlline)
     else:
         count=models.PopulationGenetics.objects.all().count()
         paging=Paging(count,page,10,8)
-        SQL='SELECT * FROM ensembl_populationgenetics LIMIT '+str(paging.start)+","+str(10)
-        result = models.PopulationGenetics.objects.raw(SQL)
+        # SQL='SELECT * FROM ensembl_populationgenetics LIMIT '+str(paging.start)+","+str(10)
+        # result = models.PopulationGenetics.objects.raw(SQL)
+        result=models.PopulationGenetics.objects.all()[paging.start:paging.end]
         page_html=paging.PageContent("/ensembl/Population/")
     page=mark_safe(' '.join(page_html))
     ret={'data':result,'count':count,'page':page}
