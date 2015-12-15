@@ -23,5 +23,4 @@ urlpatterns = [
     #url(r'Population/rsid/(\d*)', views.PopulationPost),
     url(r'Population/(?P<page>(\d*))', views.Population),
     url(r'index/', views.index),
-    url(r'index1/', views.index1),
-]
+ ]

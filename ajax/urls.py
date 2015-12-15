@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^cosmic/', include('cosmic.urls')),
-    url(r'^ensembl/', include('ensembl.urls')),
-    url(r'^ajax/', include('ajax.urls')),
+    url(r'index/', views.index),
+    url(r'add/', views.add,name='add'),
+    url(r'list/', views.ajax_list,name='ajax-list'),
+    url(r'dict/', views.ajax_dict,name='ajax-dict'),
+    url(r'edit_favorites/', views.edit_favorites,name='edit_favorites'),
+
 ]

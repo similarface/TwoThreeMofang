@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'cosmic',
     'ensembl',
+    'ajax',
 )
 
 MIDDLEWARE_CLASSES = (

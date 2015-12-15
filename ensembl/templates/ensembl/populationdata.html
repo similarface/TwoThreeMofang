@@ -1,84 +1,101 @@
-{% extends  "ensembl/menu.html"%}
+{% extends  "ensembl/menu.html" %}
 
 {% block search %}
     <div class="row">
     <form class="form-inline col-sm-11" id="search_form" method="POST" action="/ensembl/Population/rsids/">
-      <div class="form-group">
-        <label for="search_name">RSID</label>
-        <input type="text" class="form-control" name="keyword" id="search_name" placeholder="rsid号可以多个以,隔开">
-      </div>
-      <button type="submit" class="btn btn-default query">查询</button>
+        <div class="form-group">
+            <label for="search_name">RSID</label>
+            {% if rsidstr %}
+                <input type="text" class="form-control" name="keyword" id="search_name" placeholder="{{ rsidstr }}">
+            {% else %}
+                <input type="text" class="form-control" name="keyword" id="search_name" placeholder="rsid号可以多个以,隔开">
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-default query">查询</button>
     </form>
 {% endblock %}
 {% block content %}
 
 
-<link rel="stylesheet" type="text/css" href="/static/js/jqui/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="/static/js/jqui/themes/icon.css">
-<link rel="stylesheet" type="text/css" href="/static/js/jqui/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="/static/js/jqui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/static/js/jqui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/static/js/jqui/demo/demo.css">
 
 
-{#<form action="/ensembl/Population/" method="post">#}
-{#    {% csrf_token %}#}
-{#    rsid:<input type="text" name="rsid"/>#}
-{#    <input type="submit" value="提交"/>#}
-{#</form>#}
-{#<br>#}
-{##}
-{#<form enctype="multipart/form-data" method="POST" action="/ensembl/Population/rsids/">#}
-{#请选择RSIDlist文件:<input type="file" name="file" /><input type="submit" value="提交"/>#}
-{#    <br>备注：一个rsid一行#}
-{#</form>#}
-{#<br/>#}
-{##}
-<table id="example" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+    {#<form action="/ensembl/Population/" method="post">#}
+    {#    {% csrf_token %}#}
+    {#    rsid:<input type="text" name="rsid"/>#}
+    {#    <input type="submit" value="提交"/>#}
+    {#</form>#}
+    {#<br>#}
+    {##}
+    {#<form enctype="multipart/form-data" method="POST" action="/ensembl/Population/rsids/">#}
+    {#请选择RSIDlist文件:<input type="file" name="file" /><input type="submit" value="提交"/>#}
+    {#    <br>备注：一个rsid一行#}
+    {#</form>#}
+    {#<br/>#}
+    {##}
+
+    <table id="example" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%"
+           role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
-			<tr>
-				<th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">Item ID</th>
-				<th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">Product</th>
-				<th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;'">List Price</th>
-				<th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">Unit Cost</th>
-				<th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">Attribute</th>
-            </tr>
-		</thead>
+        <tr>
+            <th width="10%" class="sorting_disabled text-center itemid" rowspan="1" colspan="1" style="width: 70px;">
+                Item ID<a href="#" onclick="hideAndShow(this)">隐藏</a></th>
+            <th width="10%" class="sorting_disabled text-center product" rowspan="1" colspan="1" style="width: 70px;">
+                Product[隐藏]
+            </th>
+            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;'">List
+                Price[隐藏]
+            </th>
+            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">Unit
+                Cost[隐藏]
+            </th>
+            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">
+                Attribute[隐藏]
+            </th>
+        </tr>
+        </thead>
         <tbody>
         {% for item in data %}
             <tr role="row">
-                <td class=" text-center">{{ item.rsid }}</td>
-                <td class=" text-center">{{ item.Population }}</td>
-                <td class=" text-center">{{ item.Allele }}</td>
-                <td class=" text-center">{{ item.Genotype }}</td>
-                <td class=" text-center">{{ item.detail }}</td>
+                <td class=" text-center" id="rsid">{{ item.rsid }}</td>
+                <td class=" text-center" id="Population">{{ item.Population }}</td>
+                <td class=" text-center" id="Allele">{{ item.Allele }}</td>
+                <td class=" text-center" id="Genotype">{{ item.Genotype }}</td>
+                <td class=" text-center" id="detail">{{ item.detail }}</td>
             </tr>
         {% endfor %}
         </tbody>
-</table>
-{# <table id="dg" class="easyui-datagrid" title="Population genetics" style="width:1000px;height:450px" data-options="singleSelect:true,url:'datagrid_data1.json',method:'get'">#}
-{#        <thead>#}
-{#			<tr>#}
-{#				<th data-options="field:'itemid',width:80">Item ID</th>#}
-{#				<th data-options="field:'productid',width:250">Product</th>#}
-{#				<th data-options="field:'listprice',width:250,align:'left'">List Price</th>#}
-{#				<th data-options="field:'unitcost',width:350,align:'left'">Unit Cost</th>#}
-{#				<th data-options="field:'attr1',width:100">Attribute</th>#}
-{#            </tr>#}
-{#		</thead>#}
-{#        {% for item in data %}#}
-{#            <tr>#}
-{#                <td>{{ item.rsid }}</td>#}
-{#                <td>{{ item.Population }}</td>#}
-{#                <td>{{ item.Allele }}</td>#}
-{#                <td>{{ item.Genotype }}</td>#}
-{#                <td>{{ item.detail }}</td>#}
-{#            </tr>#}
-{#        {% endfor %}#}
-{#</table>#}
+    </table>
+
+
+    {# <table id="dg" class="easyui-datagrid" title="Population genetics" style="width:1000px;height:450px" data-options="singleSelect:true,url:'datagrid_data1.json',method:'get'">#}
+    {#        <thead>#}
+    {#			<tr>#}
+    {#				<th data-options="field:'itemid',width:80">Item ID</th>#}
+    {#				<th data-options="field:'productid',width:250">Product</th>#}
+    {#				<th data-options="field:'listprice',width:250,align:'left'">List Price</th>#}
+    {#				<th data-options="field:'unitcost',width:350,align:'left'">Unit Cost</th>#}
+    {#				<th data-options="field:'attr1',width:100">Attribute</th>#}
+    {#            </tr>#}
+    {#		</thead>#}
+    {#        {% for item in data %}#}
+    {#            <tr>#}
+    {#                <td>{{ item.rsid }}</td>#}
+    {#                <td>{{ item.Population }}</td>#}
+    {#                <td>{{ item.Allele }}</td>#}
+    {#                <td>{{ item.Genotype }}</td>#}
+    {#                <td>{{ item.detail }}</td>#}
+    {#            </tr>#}
+    {#        {% endfor %}#}
+    {#</table>#}
 {% endblock %}
 
 {% block paging %}
-                {{ page }}
+    {{ page }}
 {% endblock %}
 
 {% block countsum %}
-                {{ count }}
+    {{ count }}
 {% endblock %}
