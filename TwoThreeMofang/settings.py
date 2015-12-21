@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'cosmic',
     'ensembl',
     'ajax',
+    'houtai'
 )
 
 MIDDLEWARE_CLASSES = (

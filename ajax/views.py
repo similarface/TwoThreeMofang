@@ -6,6 +6,9 @@ from django.http import JsonResponse
 def index(request):
     return render(request,'ajax/index.html')
 
+def check(request):
+    return render(request,'ajax/checkbox.html')
+
 def add(request):
     #判断是否是ajax请求
     if request.is_ajax():

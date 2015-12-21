@@ -6,6 +6,7 @@ from TwoThreeMofang.common.tools.Paging import Paging
 from TwoThreeMofang.common.tools.DataConver import StringToInt
 import models
 from django.utils.safestring import mark_safe
+from django.db.models import Q
 from django.template import RequestContext
 
 def index(request):
@@ -15,6 +16,7 @@ def Population(request,*args,**kwargs):
     #总记录数
     if request.method=='POST':
         lrsid=request.POST.get('keyword')
+        print lrsid
         lrsid=str(lrsid).strip()
         if lrsid!="" and lrsid!=None:
             lrsid=lrsid.replace("，",",").replace(" ",'').replace("\t","")
@@ -53,11 +55,58 @@ def Population(request,*args,**kwargs):
     page=mark_safe(' '.join(page_html))
     #获取请求的关键字
     lrsid=request.session.get('rsidstr')
-    ret={'data':result,'count':count,'page':page,'rsidstr':lrsid}
+    checkboxContext=models.ModelInfo.objects.filter(TABLE_NAME='ensembl_populationgenetics')
+    ret={'data':result,'checkselect':checkboxContext,'count':count,'page':page,'rsidstr':lrsid}
     return render_to_response('ensembl/populationdata.html',ret)
 
 
-
+def SelfPopulation(request,*args,**kwargs):
+    print('------')
+    #总记录数
+    if request.method=='POST':
+        lrsid=request.POST.get('keyword').encode('utf-8')
+        lrsid=str(lrsid).strip()
+        print(lrsid)
+        if lrsid!="" and lrsid!=None:
+            lrsid=lrsid.replace("，",",").replace(" ",'').replace("\t","")
+            rsids=lrsid.split(',')
+            request.session['rsidlist']=rsids
+            request.session['rsidstr']=lrsid
+        else:
+            request.session['rsidlist']=None
+            request.session['rsidstr']=None
+    page=kwargs.get('page')
+    page=StringToInt(page)
+    rsids=request.session.get('rsidlist')
+    #如果输入框有关键字请求进入
+    if rsids!=None and rsids!='' and 'rsids' in request.path:
+        #获取记录数目
+        count=models.SelfPopulationGenetics.objects.filter(Q(rsid__in=rsids) | Q(pos__in=rsids)).count()
+        #创建分页对象
+        paging=Paging(count,page,10,8)
+        #关键字筛选
+        result=models.SelfPopulationGenetics.objects.filter(Q(rsid__in=rsids) | Q(pos__in=rsids))[paging.start:paging.end]
+        #连接地址介入
+        urlline='/ensembl/Population/rsids/'
+        #分页链接代码
+        page_html=paging.PageContent(urlline)
+    else:
+        #输入框没有关键字请求进入
+        #获取记录数目
+        request.session['rsidlist']=None
+        request.session['rsidstr']=None
+        count=models.SelfPopulationGenetics.objects.all().count()
+        paging=Paging(count,page,10,8)
+        result=models.SelfPopulationGenetics.objects.all()[paging.start:paging.end]
+        #分页链接代码
+        page_html=paging.PageContent("/ensembl/Population/")
+    #分页的连接转码
+    page=mark_safe(' '.join(page_html))
+    #获取请求的关键字
+    lrsid=request.session.get('rsidstr')
+    checkboxContext=models.ModelInfo.objects.filter(TABLE_NAME='mofang_populationgenetics')
+    ret={'data':result,'checkselect':checkboxContext,'count':count,'page':page,'rsidstr':lrsid}
+    return render_to_response('ensembl/populationdata.html',ret)
 
 
 

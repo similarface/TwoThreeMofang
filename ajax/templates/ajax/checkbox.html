@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>选择输入项目</title>
+<link href="/static/css/common.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type='text/javascript' ></script>
+<script src="/static/js/jquery.dialog.js" type='text/javascript' ></script>
+<script src="/static/js/QS_classify.js" type="text/javascript"></script>
+<script src="/static/js/jquery.selectlayer.js" type='text/javascript' ></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	OpenCategoryLayer("#district_cn","#sel_district","#district_cn","#citycategory",QS_city,1);
+});
+</script>
+</head>
+<body>
+
+<br />
+<br />
+<div class=""> <br />
+  <div class="item" style="margin-left:300px;">
+    <input name="district_cn"  id="district_cn" type="text" value="请选择你要显示的列"  readonly="true" class="sltinput">
+    <input name="citycategory" id="citycategory" type="hidden" value="" />
+    <div  style="display:none" id="sel_district">
+      <div class="OpenFloatBoxBg" ></div>
+      <div class="OpenFloatBox">
+        <div class="title">
+          <h4>请选择工作地区</h4>
+          <div class="DialogClose" title="关闭"></div>
+        </div>
+        <div class="tip">可多选，最多选择8项</div>
+        <div class="content link_lan">
+          <div class="txt">
+            <div class="item" id="593">
+              <label title="新塘" class="titem" >
+              <input  type="checkbox" value="593"  title="新塘" class="b" />
+              新塘 </label>
+              <div class="sitem"></div>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+          <div class="txt">
+            <div class="selecteditem"></div>
+          </div>
+          <div class="txt">
+            <div align="center">
+              <input type="button"  class="but80 Set" value="确定" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>

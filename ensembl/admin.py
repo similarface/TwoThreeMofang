@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from models import PopulationGenetics
+from models import PopulationGenetics,ModelInfo
 class PopulationGeneticsAdmin(admin.ModelAdmin):
     # ...
     list_display = ('rsid', 'Population', 'Allele','Genotype','detail')
@@ -11,4 +11,6 @@ class PopulationGeneticsAdmin(admin.ModelAdmin):
     search_fields = ['rsid']
 
 admin.site.register(PopulationGenetics,PopulationGeneticsAdmin)
+
+admin.site.register(ModelInfo)
 

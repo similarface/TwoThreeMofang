@@ -19,8 +19,14 @@ import views
 
 urlpatterns = [
     #url(r'Population/rsids/(?P<page>(\d*))',views.PopulationRsids),
-    url(r'Population/rsids/(?P<page>(\d*))', views.Population),
+    # url(r'Population/rsids/(?P<page>(\d*))', views.Population),
+    # #url(r'Population/rsid/(\d*)', views.PopulationPost),
+    # url(r'Population/(?P<page>(\d*))', views.Population),
+    # url(r'index/', views.index),
+
+
+    url(r'Population/rsids/(?P<page>(\d*))', views.SelfPopulation),
     #url(r'Population/rsid/(\d*)', views.PopulationPost),
-    url(r'Population/(?P<page>(\d*))', views.Population),
-    url(r'index/', views.index),
+    url(r'Population/(?P<page>(\d*))', views.SelfPopulation),
+    url(r'index/', views.SelfPopulation),
  ]

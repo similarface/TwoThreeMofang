@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'add/', views.add,name='add'),
     url(r'list/', views.ajax_list,name='ajax-list'),
     url(r'dict/', views.ajax_dict,name='ajax-dict'),
+    url(r'check/', views.check,name='check'),
     url(r'edit_favorites/', views.edit_favorites,name='edit_favorites'),
 
 ]

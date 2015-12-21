@@ -2,18 +2,99 @@
 
 {% block search %}
     <div class="row">
-    <form class="form-inline col-sm-11" id="search_form" method="POST" action="/ensembl/Population/rsids/">
-        <div class="form-group">
-            <label for="search_name">RSID</label>
-            {% if rsidstr %}
-                <input type="text" class="form-control" name="keyword" id="search_name" placeholder="{{ rsidstr }}">
-            {% else %}
-                <input type="text" class="form-control" name="keyword" id="search_name" placeholder="rsid号可以多个以,隔开">
-            {% endif %}
-        </div>
-        <button type="submit" class="btn btn-default query">查询</button>
-    </form>
+        <form class="form-inline col-sm-11" id="search_form" method="POST" action="/ensembl/Population/rsids/">
+            <div class="form-group">
+                <label for="search_name">RSID</label>
+                {% if rsidstr %}
+                    <input type="text" class="form-control" name="keyword" id="search_name" placeholder="{{ rsidstr }}">
+                {% else %}
+                    <input type="text" class="form-control" name="keyword" id="search_name" placeholder="rsid号可以多个以,隔开">
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-default query">查询</button>
+
+
+{#            &nbsp;&nbsp;&nbsp;<input name="district_cn" id="district_cn" type="text" value="请选择你要显示的列" readonly="true"#}
+{#                                     class="sltinput">#}
+{#            &nbsp;&nbsp;&nbsp;<input name="citycategory" id="citycategory" type="hidden" value=""/>#}
+{##}
+{#            <div style="display:none" id="sel_district">#}
+{#                <div class="OpenFloatBoxBg"></div>#}
+{#                <div class="OpenFloatBox">#}
+{#                    <div class="title">#}
+{#                        <h4>请选择显示列</h4>#}
+{#                        <div class="DialogClose" title="关闭"></div>#}
+{#                    </div>#}
+{#                    <div class="tip">可多选，最多选择8项</div>#}
+{#                    <div class="content link_lan">#}
+{#                        <div class="txt">#}
+{#                            {% for foo in checkselect %}#}
+{#                                <div class="item" id="593">#}
+{#                                    <label title="{{ foo.COLUMN_NAME }}" class="titem"><input type="checkbox"#}
+{#                                                                                              value="{{ foo.COLUMN_NAME }}"#}
+{#                                                                                              title="{{ foo.COLUMN_NAME }}"#}
+{#                                                                                              class="b"/>{{ foo.COLUMN_NAME }}#}
+{#                                    </label>#}
+{##}
+{#                                    <div class="sitem"></div>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        </div>#}
+{#                        <div class="clear"></div>#}
+{#                    </div>#}
+{#                    <div class="txt">#}
+{#                        <div class="selecteditem"></div>#}
+{#                    </div>#}
+{#                    <div class="txt">#}
+{#                        <div align="center">#}
+{#                            <input type="button" class="but80 Set" value="确定"/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+          </form>
+    </div>
 {% endblock %}
+{% block searchview %}
+    {#  <div class="row">#}
+    {#  <div class="form-group">#}
+    {#    <input name="district_cn"  id="district_cn" type="text" value="请选择你要显示的列"  readonly="true" class="form-control">#}
+    {#    <input name="citycategory" id="citycategory" type="hidden" value="" />#}
+    {#    <div  style="display:none" id="sel_district">#}
+    {#      <div class="OpenFloatBoxBg" ></div>#}
+    {#      <div class="OpenFloatBox">#}
+    {#        <div class="title">#}
+    {#          <h4>请选择工作地区</h4>#}
+    {#          <div class="DialogClose" title="关闭"></div>#}
+    {#        </div>#}
+    {#        <div class="tip">可多选，最多选择8项</div>#}
+    {#        <div class="content link_lan">#}
+    {#          <div class="txt">#}
+    {#            <div class="item" id="593">#}
+    {#              <label title="新塘" class="titem" >#}
+    {#              <input  type="checkbox" value="593"  title="新塘" class="b" />#}
+    {#              新塘 </label>#}
+    {#              <div class="sitem"></div>#}
+    {#            </div>#}
+    {##}
+    {#            <div class="clear"></div>#}
+    {#          </div>#}
+    {#          <div class="txt">#}
+    {#            <div class="selecteditem"></div>#}
+    {#          </div>#}
+    {#          <div class="txt">#}
+    {#            <div align="center">#}
+    {#              <input type="button"  class="but80 Set" value="确定" />#}
+    {#            </div>#}
+    {#          </div>#}
+    {#        </div>#}
+    {#      </div>#}
+    {#    </div>#}
+    {#  </div>#}
+    {#  <div class="clear"></div>#}
+    {#</div>#}
+{% endblock %}
+
 {% block content %}
 
 
@@ -40,30 +121,39 @@
            role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
         <tr>
-            <th width="10%" class="sorting_disabled text-center itemid" rowspan="1" colspan="1" style="width: 70px;">
-                Item ID<a href="#" onclick="hideAndShow(this)">隐藏</a></th>
-            <th width="10%" class="sorting_disabled text-center product" rowspan="1" colspan="1" style="width: 70px;">
-                Product[隐藏]
-            </th>
-            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;'">List
-                Price[隐藏]
-            </th>
-            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">Unit
-                Cost[隐藏]
+            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">chrom
             </th>
             <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;">
-                Attribute[隐藏]
+                pos
             </th>
+            <th width="10%" class="sorting_disabled text-center itemid" rowspan="1" colspan="1" style="width: 70px;">
+                RSID</th>
+            <th width="10%" class="sorting_disabled text-center product" rowspan="1" colspan="1" style="width: 70px;">
+                AlleleFreq
+            </th>
+            <th width="10%" class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 70px;'">GenoFreq
+            </th>
+
         </tr>
         </thead>
         <tbody>
+{#        {% for item in data %}#}
+{#            <tr role="row">#}
+{#                <td class=" text-center" id="rsid">{{ item.rsid }}</td>#}
+{#                <td class=" text-center" id="Population">{{ item.Population }}</td>#}
+{#                <td class=" text-center" id="Allele">{{ item.Allele }}</td>#}
+{#                <td class=" text-center" id="Genotype">{{ item.Genotype }}</td>#}
+{#                <td class=" text-center" id="detail">{{ item.detail }}</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
         {% for item in data %}
             <tr role="row">
+                <td class=" text-center" id="Genotype">{{ item.chrom }}</td>
+                <td class=" text-center" id="detail">{{ item.pos }}</td>
                 <td class=" text-center" id="rsid">{{ item.rsid }}</td>
-                <td class=" text-center" id="Population">{{ item.Population }}</td>
-                <td class=" text-center" id="Allele">{{ item.Allele }}</td>
-                <td class=" text-center" id="Genotype">{{ item.Genotype }}</td>
-                <td class=" text-center" id="detail">{{ item.detail }}</td>
+                <td class=" text-center" id="Population">{{ item.ATGC }}</td>
+                <td class=" text-center" id="Allele">{{ item.AATTGGCC }}</td>
+
             </tr>
         {% endfor %}
         </tbody>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>23mofang</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="/static/css/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/css/web-admin.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- jquery.dataTables.css -->
+    <link href="/static/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- Responsive Nav -->
+    <link rel="stylesheet" href="/static/css/responsive-nav.css" type="text/css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script type="text/javascript" src="/static/js/metisMenu.min.js"></script>
+    <!-- Responsive Nav -->
+    <script type="text/javascript" src="/static/js/responsive-nav.min.js"></script>
+
+    <!-- jQuery DataTables JavaScript -->
+    <script type="text/javascript" src="/static/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/static/js/dataTables.bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/static/js/web-admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <!-- Navigation -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div id="nav-haeader">
+            欢迎您：
+            王炎
+            &nbsp;&nbsp; <a href="javascript:;" data-toggle="modal" data-target="#modal_form_changepwd"
+                            title="修改密码">修改</a> <a href="http://admin.23mofang.com/logout" title="注销登录"> <i
+                class="fa fa-sign-out fa-fw"></i> </a>
+            <a href="http://admin.23mofang.com/disease#nav" id="toggleMenu" aria-hidden="true">Menu</a>
+        </div>
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav nav-collapse nav-collapse-0 closed" id="side-menu" aria-hidden="false"
+                style="transition: max-height 284ms; position: static;">
+                <li class="active">
+                    <a href="http://admin.23mofang.com/disease#"> <i class="fa fa-sitemap fa-fw"> </i> 数据管理 <span
+                            class="fa arrow"></span> </a>
+                    <ul class="nav nav-second-level collapse in">
+                        <li>
+                            <a href="#" class="active"> <i class="fa fa-medkit fa-fw"> </i> 健康风险 </a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/drug"> <i class="fa fa-briefcase fa-fw"> </i> 药物列表 </a>
+                        </li>
+                        <li>
+                            <a href=""> <i class="fa fa-leaf fa-fw"> </i> 体质特征 </a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/trait-category"> <i class="fa fa-leaf fa-fw"> </i> 体质特征分类</a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/inherited"> <i class="fa fa-pagelines fa-fw"> </i> 罕见遗传病
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/inherited-cancer"> <i class="fa fa-child fa-fw"> </i>
+                                遗传性肿瘤 </a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/gene"> <i class="fa fa-stumbleupon fa-fw"> </i> 基因库 </a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/pathotype"> <i
+                                    class="fa fa-exclamation-circle fa-fw"> </i> 致病突变 </a>
+                        </li>
+                        <li>
+                            <a href="http://admin.23mofang.com/impact-factor"> <i class="fa fa-fighter-jet fa-fw"> </i>
+                                影响因素 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="http://admin.23mofang.com/media-article"> <i class="fa fa-bullhorn fa-fw"> </i> 媒体报道 </a>
+                </li>
+                <li>
+                    <a href="http://admin.23mofang.com/faq"> <i class="fa fa-question-circle fa-fw"> </i> FAQ </a>
+                </li>
+                <li>
+                    <a href="http://admin.23mofang.com/sms"> <i class="fa fa-envelope fa-fw"> </i> 短信中心 </a>
+                </li>
+                <li>
+                    <a href="http://admin.23mofang.com/disease#"> <i class="fa fa-bullhorn fa-fw"> </i> Gene Club <span
+                            class="fa arrow"></span> </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="http://admin.23mofang.com/gene-club/list">文章列表 </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Content -->
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal_form_changepwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title">修改密码</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="username" class="col-sm-3 control-label">用户名</label>
+
+                        <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="username" readonly="" value="王炎">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="oldPassword" class="col-sm-3 control-label">旧密码</label>
+
+                        <div class="col-sm-6 input-group">
+                            <input type="password" class="form-control" id="oldPassword" name="oldPassword">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">新密码</label>
+
+                        <div class="col-sm-6 input-group">
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">放弃</button>
+                        <button type="submit" class="btn btn-primary save" data-loading-text="Saving...">保存</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var navigation = responsiveNav("#side-menu", {customToggle: "#toggleMenu", openPos: "static"});
+        $(function () {
+            $('#modal_form_changepwd form').on('submit', function () {
+                var data = $(this).formGet();
+                console.log(data);
+                $.ajax({
+                    url: "/change-pwd",
+                    type: "POST",
+                    dataType: "json",
+                    cache: false,
+                    data: data,
+                    success: function (res) {
+                        if (!res.code) return alert(res.error || '保存失败!');
+                        $('#modal_form_changepwd').modal('hide').formSet({});
+                    },
+                    error: function () {
+                        alert('保存失败!');
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

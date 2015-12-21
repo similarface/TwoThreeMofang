@@ -532,7 +532,7 @@ table.dataTable thead .sorting:after {
 	height: 34px !important;
 }
 
-td.selected: AFTER {
+td.selected {
 	color: green;
 	display: inline-block;
 	font: normal normal normal 14px/1 FontAwesome;

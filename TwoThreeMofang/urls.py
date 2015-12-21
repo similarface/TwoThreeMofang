@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^cosmic/', include('cosmic.urls')),
     url(r'^ensembl/', include('ensembl.urls')),
     url(r'^ajax/', include('ajax.urls')),
+    url(r'^ht/', include('houtai.urls')),
 ]
